@@ -496,7 +496,7 @@ const CadastroDeFornecedor = () => {
                             }))}
                         />
 
-                        <Button primary onClick={postDataEmpresa} type="submit">
+                        <Button positive onClick={postDataEmpresa} type="submit">
                             Gravar
                         </Button>
                     </Form>
@@ -658,7 +658,7 @@ const CadastroDeFornecedor = () => {
                         <Message success header={successMessage} />
                         <Message error header={errorMessage} />
                         <Message warning header={warningMessage} />
-                        <Button primary onClick={postData} type="submit">
+                        <Button positive onClick={postData} type="submit">
                             Gravar
                         </Button>
                     </Form>

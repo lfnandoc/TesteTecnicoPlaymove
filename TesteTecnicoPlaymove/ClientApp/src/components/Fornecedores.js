@@ -35,7 +35,7 @@ const Fornecedores = () => {
     const onChangeFilterNome = (event, data) => {
         if (!data)
             return;
-
+        setSearchLoading(true);
         setFilterNome(data.value);
     };
 
@@ -43,7 +43,7 @@ const Fornecedores = () => {
     const onChangeFilterCnpjCpf = (event, data) => {
         if (!data)
             return;
-
+        setSearchLoading(true);
         setFilterCnpjCpf(data.value);
     };
 
@@ -51,7 +51,7 @@ const Fornecedores = () => {
     const onChangeFilterDataDeCadastro = (event, data) => {
         if (!data)
             return;
-
+        setSearchLoading(true);
         setFilterDataDeCadastro(data.value);
     };
 
@@ -195,7 +195,7 @@ const Fornecedores = () => {
                                     floated="left"
                                     icon
                                     labelPosition="left"
-                                    primary
+                                    secondary
                                     size="small"
                                 >
                                     <Icon name="address book" /> Cadastrar fornecedor

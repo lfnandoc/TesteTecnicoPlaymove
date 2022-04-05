@@ -3,6 +3,7 @@ using TesteTecnicoPlaymove.Infra;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddSwaggerGen();
 
 AppConfiguration.ConnectionString = builder.Configuration.GetValue<string>("ConnectionString");
 
@@ -20,6 +21,8 @@ if (app.Environment.IsProduction())
     app.Urls.Add($"http://*:{port}");
 }
 
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

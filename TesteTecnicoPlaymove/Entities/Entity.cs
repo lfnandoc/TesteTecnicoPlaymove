@@ -233,7 +233,7 @@ namespace TesteTecnicoPlaymove.Entities
 
                 if (propertyValue is DateTime propertyValueAsDateTime)
                 {
-                    valuesToUpdate.Add(column.ColumnName, $"\'{propertyValueAsDateTime.ToString("yyyy-MM-dd")}\'");
+                    valuesToUpdate.Add(column.ColumnName, $"\'{propertyValueAsDateTime.ToString("yyyy-MM-dd HH:mm:ss")}\'");
                     continue;
                 }
 
