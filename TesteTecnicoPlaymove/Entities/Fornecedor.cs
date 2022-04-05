@@ -107,7 +107,7 @@ namespace TesteTecnicoPlaymove.Entities
 
             if (filters.DataDeCadastroStart != DateTime.MinValue && filters.DataDeCadastroEnd != DateTime.MinValue)
             {
-                sql.Append($" AND (dataDeCadastro BETWEEN '{filters.DataDeCadastroStart.ToString("yyyy-MM-dd")}' AND '{filters.DataDeCadastroEnd.ToString("yyyy-MM-dd")}')");
+                sql.Append($" AND (dataDeCadastro BETWEEN '{filters.DataDeCadastroStart.ToString("yyyy-MM-dd 00:00:00")}' AND '{filters.DataDeCadastroEnd.ToString("yyyy-MM-dd 23:59:59")}')");
             }
 
             return sql.ToString();
